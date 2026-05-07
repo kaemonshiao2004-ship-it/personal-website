@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kaemon Shiao — Lead & Create</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ============== TOP BAR ============== -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>kaemon shiao</span>
+    </div>
+
+    <nav class="tabs" id="tabs" aria-label="Primary">
+      <button class="tab active" data-tab="home"><span class="pulse"></span>home</button>
+      <button class="tab" data-tab="about">about</button>
+      <button class="tab" data-tab="work">work</button>
+      <button class="tab" data-tab="projects">projects</button>
+      <button class="tab" data-tab="awards">awards</button>
+      <button class="tab" data-tab="contact">contact</button>
+    </nav>
+  </header>
+
+  <!-- ============== HOME ============== -->
+  <section class="page active" data-page="home" data-screen-label="01 Home">
+    <div class="home-grid">
+
+      <!-- LEFT -->
+      <div class="home-left">
+        <div class="tile hero-tile">
+          <div class="name-row">
+            <span class="label"><span class="square"></span>HOU · TX</span>
+            <span class="badge">v · 2026</span>
+          </div>
+          <h1 class="display">lead<br><em>&amp; create.</em></h1>
+          <p class="tagline">hi, i'm <b>Kaemon</b> — strategy-driven, <em>relentlessly creative</em>, and addicted to building things people actually use.</p>
+        </div>
+
+        <div class="tile">
+          <span class="label"><span class="square"></span>about / short version</span>
+          <p class="lede" style="margin-top:12px;">
+            two years in <span class="hi-warm"><b>consulting at KPMG</b></span>, shipping internal tools and audit programs.
+            i <b>build products</b> and launch them. i <b>create content</b>, grow brands, and pull in <span class="hi-coral"><b>~1M views</b></span>
+            for AI companies. i <em>led the largest student org on UH campus</em> and we kept winning.
+            i <span class="hi-sage"><b>solve problems</b></span> and i <b>get things done</b>.
+          </p>
+        </div>
+
+        <div class="tile dark now-tile">
+          <span class="now-dot"></span>
+          <span class="text">currently — finishing senior year, scaling <em>life of kae</em>, and shipping UGC for AI brands.</span>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat"><div class="num"><em>~1M</em></div><div class="lab">content views</div></div>
+          <div class="stat"><div class="num">2<em>yr</em></div><div class="lab">at kpmg</div></div>
+          <div class="stat"><div class="num">1<em>st</em></div><div class="lab">harvard svmp</div></div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="home-right">
+
+        <div class="tile photo-tile">
+          <div class="ph">[ PORTRAIT — drop a photo here ]</div>
+          <span class="corner">PHOTO 01</span>
+          <span class="corner right">2026</span>
+        </div>
+
+        <div class="tile exp-tile">
+          <h3>the <em>highlights</em>.</h3>
+          <div class="sub">click anything · everything talks back</div>
+
+          <div class="exp-grid" id="expGrid">
+            <button class="exp-btn" data-key="uh">
+              <span class="glyph" style="color:var(--accent);">UH</span>
+              <span class="name">univ. of houston</span>
+            </button>
+            <button class="exp-btn" data-key="kpmg">
+              <span class="glyph" style="color:#0033A0;">K.</span>
+              <span class="name">kpmg</span>
+            </button>
+            <button class="exp-btn" data-key="harvard">
+              <span class="glyph" style="font-style:italic;">H</span>
+              <span class="name">harvard svmp</span>
+            </button>
+            <button class="exp-btn" data-key="tennis">
+              <span class="glyph">◐</span>
+              <span class="name">tennis · pres.</span>
+            </button>
+            <button class="exp-btn" data-key="lead">
+              <span class="glyph" style="color:var(--accent-3);">★</span>
+              <span class="name">leadership</span>
+            </button>
+            <button class="exp-btn" data-key="kae">
+              <span class="glyph" style="font-family:'Instrument Serif';font-style:italic;color:var(--accent);">k</span>
+              <span class="name">life of kae</span>
+            </button>
+            <button class="exp-btn" data-key="ugc">
+              <span class="glyph" style="color:var(--accent-2);">▲</span>
+              <span class="name">ai · ugc</span>
+            </button>
+            <button class="exp-btn" data-key="atkco">
+              <span class="glyph" style="font-family:'JetBrains Mono';font-size:14px;">A.</span>
+              <span class="name">atkco</span>
+            </button>
+          </div>
+
+          <div class="exp-detail" id="expDetail">
+            <h4 id="expTitle">click any tile</h4>
+            <div class="meta" id="expMeta">— · —</div>
+            <p id="expBody">each one expands a story. consider this a museum placard.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span><em>lead</em></span><span class="star">✦</span>
+        <span>create</span><span class="star">✦</span>
+        <span><em>ship</em></span><span class="star">✦</span>
+        <span>repeat</span><span class="star">✦</span>
+        <span><em>strategy</em></span><span class="star">✦</span>
+        <span>storytelling</span><span class="star">✦</span>
+        <span><em>brand</em></span><span class="star">✦</span>
+        <span>product</span><span class="star">✦</span>
+        <span><em>lead</em></span><span class="star">✦</span>
+        <span>create</span><span class="star">✦</span>
+        <span><em>ship</em></span><span class="star">✦</span>
+        <span>repeat</span><span class="star">✦</span>
+        <span><em>strategy</em></span><span class="star">✦</span>
+        <span>storytelling</span><span class="star">✦</span>
+        <span><em>brand</em></span><span class="star">✦</span>
+        <span>product</span><span class="star">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ABOUT ============== -->
+  <section class="page" data-page="about" data-screen-label="02 About">
+    <div class="page-intro">
+      <h2 class="section">a longer<br><em>about me</em>.</h2>
+      <p>the part where i stop being modest and just say what i'm good at.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="tile about-prose">
+        <p>i'm <b>Kaemon Shiao</b>. business-finance brain, creative hands. i grew up in Houston and i've spent the last few years toggling between <em>spreadsheets and storyboards</em>.</p>
+        <p>at <b>KPMG</b> i learned how the biggest companies actually run — and how to find the cracks.
+          on the side i was building an audience: <em>life of kae</em> turned into a real little brand, and that turned into <b>UGC work for AI startups</b> like Lovable, Turbo AI, and Surgent AI.</p>
+        <p>i ran <b>UH's largest student org</b>. i captained the men's tennis team and we made <em>our first ever Sectionals win</em> and the program's <em>first Nationals appearance</em>.</p>
+        <p>i'm happiest when there's a <b>messy problem</b> and a <em>tight deadline</em>.</p>
+      </div>
+
+      <div class="tile warm">
+        <span class="label"><span class="square"></span>operating principles</span>
+        <div class="values-list" style="margin-top:14px;">
+          <div class="value-row"><div class="vnum">i.</div><div class="vtext"><b>strategy is just storytelling</b>with numbers attached.</div></div>
+          <div class="value-row"><div class="vnum">ii.</div><div class="vtext"><b>the deck is not the deal</b>build the thing, then talk.</div></div>
+          <div class="value-row"><div class="vnum">iii.</div><div class="vtext"><b>brand &gt; reach</b>views are vanity, repeat audiences are real.</div></div>
+          <div class="value-row"><div class="vnum">iv.</div><div class="vtext"><b>lead by going first</b>no one follows a memo.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== WORK ============== -->
+  <section class="page" data-page="work" data-screen-label="03 Work">
+    <div class="page-intro">
+      <h2 class="section">where i've<br><em>worked</em>.</h2>
+      <p>two sentences per role — combined, condensed, and only the highlights.</p>
+    </div>
+
+    <div class="work-list">
+      <div class="work-item">
+        <div class="when">2024 — present</div>
+        <div>
+          <h3><em>KPMG</em> · advisory</h3>
+          <div class="role">consulting · strategy &amp; risk</div>
+          <p>spent two years inside Big-4 advisory — running audit-adjacent programs, building internal tooling, and translating exec strategy into things the team actually shipped. learned how billion-dollar orgs move, where they break, and how to write for both the operator and the boardroom.</p>
+        </div>
+        <span class="tag">2 yrs</span>
+      </div>
+
+      <div class="work-item">
+        <div class="when">2023 — 2024</div>
+        <div>
+          <h3><em>AtkCo</em> · operations</h3>
+          <div class="role">internship · ops &amp; analysis</div>
+          <p>helped run analysis and reporting for a fast-moving small team — touched everything from finance ops to client decks. left with a new appreciation for spreadsheets and a healthier sense of when to throw them out.</p>
+        </div>
+        <span class="tag">internship</span>
+      </div>
+
+      <div class="work-item">
+        <div class="when">2024 — present</div>
+        <div>
+          <h3><em>life of kae</em> · creator</h3>
+          <div class="role">personal brand · short-form video</div>
+          <p>started a lifestyle channel about college, travel, and the actual texture of being 21. grew a real audience the slow way and turned the rep into commercial UGC work. the playbook now compounds.</p>
+        </div>
+        <span class="tag">~1M views</span>
+      </div>
+
+      <div class="work-item">
+        <div class="when">2024 — present</div>
+        <div>
+          <h3><em>UGC</em> · ai brands</h3>
+          <div class="role">creator-for-hire · short-form ads</div>
+          <p>ship sponsored short-form for Lovable, Turbo AI, Surgent AI and others — converting cold scrolls into installs by hooking on the niche, not the feature. six months in, it's a tight little business that pays attention back.</p>
+        </div>
+        <span class="tag">6 mo · live</span>
+      </div>
+
+      <div class="work-item">
+        <div class="when">2023 — 2025</div>
+        <div>
+          <h3><em>UH</em> student org · president</h3>
+          <div class="role">leadership · 200+ members</div>
+          <p>led the largest student organization on the University of Houston campus through a full operating cycle — events, sponsorships, comms, recruitment, the whole thing. left it bigger and more functional than i found it.</p>
+        </div>
+        <span class="tag">leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PROJECTS ============== -->
+  <section class="page" data-page="projects" data-screen-label="04 Projects">
+    <div class="page-intro">
+      <h2 class="section">things i<br><em>made</em>.</h2>
+      <p>part personal brand, part client work, part case competitions. all shipping.</p>
+    </div>
+
+    <div class="proj-grid">
+      <div class="proj-card coral">
+        <div class="meta">project · 01</div>
+        <h3><em>life of kae</em></h3>
+        <p>short-form lifestyle content about my journey through college, travel, and friends. the slow build — real opinions, real footage, real audience. now the foundation for everything else i do online.</p>
+        <div class="pills"><span class="pill">short-form</span><span class="pill">lifestyle</span><span class="pill">brand</span></div>
+        <a class="handle" href="https://instagram.com/_lifeofkae" target="_blank" rel="noopener">@_lifeofkae →</a>
+      </div>
+
+      <div class="proj-card dark">
+        <div class="meta">project · 02</div>
+        <h3>ai · <em>ugc</em></h3>
+        <p>creator-for-hire spots for some of the largest AI brands — Lovable, Turbo AI, Surgent AI. niche-targeted, on-brand, conversion-focused. six months in and the metrics keep moving in the right direction.</p>
+        <div class="pills"><span class="pill">ads</span><span class="pill">conversion</span><span class="pill">creator</span></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <a class="handle" href="https://instagram.com/kae.buildz" target="_blank" rel="noopener">@kae.buildz →</a>
+          <a class="handle" href="https://instagram.com/social.kae" target="_blank" rel="noopener">@social.kae →</a>
+        </div>
+      </div>
+
+      <div class="proj-card mustard">
+        <div class="meta">project · 03</div>
+        <h3>case <em>competitions</em>.</h3>
+        <p>multiple finals appearances across business and finance case competitions — strategy decks, financial models, and real five-minute pitches in front of judges who don't care if you're tired.</p>
+        <div class="pills"><span class="pill">strategy</span><span class="pill">finance</span><span class="pill">pitch</span></div>
+      </div>
+
+      <div class="proj-card sage">
+        <div class="meta">project · 04</div>
+        <h3>products i've<br><em>shipped</em>.</h3>
+        <p>side products built end-to-end — concept, launch, audience. small, but real users and real lessons. the kind of work that taught me to ship before it's ready.</p>
+        <div class="pills"><span class="pill">0→1</span><span class="pill">launch</span><span class="pill">indie</span></div>
+      </div>
+    </div>
+
+    <div class="tile" style="margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+      <div>
+        <span class="label"><span class="square"></span>combined reach</span>
+        <div class="big-stat" style="margin-top:4px;"><em>~</em>1M<em>+</em></div>
+      </div>
+      <p style="max-width:36ch;color:var(--ink-soft);font-size:14.5px;margin:0;">
+        combined views across personal &amp; client content. the number keeps climbing — but the goal is repeat audiences, not vanity charts.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== AWARDS ============== -->
+  <section class="page" data-page="awards" data-screen-label="05 Awards">
+    <div class="page-intro">
+      <h2 class="section">trophy<br><em>shelf</em>.</h2>
+      <p>the things i'm most proud of, in roughly the order i'd brag about them.</p>
+    </div>
+
+    <div class="awards-grid">
+      <div class="award featured">
+        <div class="meta">★ FEATURED · 2024</div>
+        <h3>Harvard <em>SVMP</em><br>1st place.</h3>
+        <p style="margin-top:auto;">first place at the Harvard Summer Venture in Management Program — one of the most selective business programs at the school. judged by Harvard MBA faculty. a personal favorite.</p>
+      </div>
+
+      <div class="award tall">
+        <div class="meta">tennis · captain</div>
+        <h3>1<em>st</em> ever<br>Sectionals.<br>1<em>st</em> ever<br>Nationals.</h3>
+        <p style="margin-top:auto;">led the men's tennis team to the program's first ever Sectionals win and first ever Nationals appearance. as president and captain, both.</p>
+      </div>
+
+      <div class="award wide">
+        <div class="meta">academic · 2024</div>
+        <h3>Dean's <em>List</em>.</h3>
+        <p>multi-semester recognition for academic performance at the University of Houston Bauer College of Business.</p>
+      </div>
+
+      <div class="award normal">
+        <div class="meta">tennis · hs</div>
+        <h3>State <em>Champion</em>.</h3>
+        <p>won at the state level in high school singles competition before moving on to college play.</p>
+      </div>
+
+      <div class="award wide" style="background:var(--accent-2);color:var(--paper);">
+        <div class="meta">leadership · uh</div>
+        <h3><em>Largest</em> student org<br>on campus · president.</h3>
+        <p>elected president of the biggest student organization on the University of Houston campus.</p>
+      </div>
+
+      <div class="award normal" style="background:var(--lilac);">
+        <div class="meta">case comps · multiple</div>
+        <h3>Case<br>Comp <em>Finalist</em>.</h3>
+        <p>finalist in multiple business and finance case competitions across the region.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section class="page" data-page="contact" data-screen-label="06 Contact">
+    <div class="page-intro">
+      <h2 class="section">say <em>hi</em>.</h2>
+      <p>open to interesting conversations — strategy, finance, content, all of it.</p>
+    </div>
+
+    <div class="contact-grid">
+      <a class="contact-link" href="mailto:kaemonshiao2004@gmail.com">
+        <span><em>email</em> me</span>
+        <span class="arrow">↗</span>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/kaemonshiao/" target="_blank" rel="noopener">
+        <span><em>linked</em>in</span>
+        <span class="arrow">↗</span>
+      </a>
+      <a class="contact-link" href="https://instagram.com/_lifeofkae" target="_blank" rel="noopener">
+        <span>@_<em>life</em>ofkae</span>
+        <span class="arrow">↗</span>
+      </a>
+      <a class="contact-link" href="https://instagram.com/kae.buildz" target="_blank" rel="noopener">
+        <span>@kae.<em>buildz</em></span>
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="tile dark" style="margin-top:22px;text-align:center;padding:48px 24px;">
+      <span class="label" style="color:oklch(0.78 0.02 80);"><span class="square"></span>open to</span>
+      <h2 class="section" style="color:var(--paper);margin-top:8px;">strategy roles.<br>creative <em>partnerships</em>.<br>good coffee.</h2>
+    </div>
+  </section>
+
+  <!-- ============== BOTTOM ============== -->
+  <footer class="bottom">
+    <span>© 2026 KAEMON SHIAO · LEAD &amp; CREATE</span>
+    <button class="audio-toggle" id="audioToggle">SOUND · ON</button>
+  </footer>
+
+</div>
+
+<script>
+  // ---------- click sound (web audio) ----------
+  let audioCtx = null;
+  let soundOn = true;
+  function tick(freq=520, dur=0.05) {
+    if (!soundOn) return;
+    try {
+      audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+      const o = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      o.type = 'triangle';
+      o.frequency.value = freq;
+      g.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.18, audioCtx.currentTime + 0.005);
+      g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+      o.connect(g).connect(audioCtx.destination);
+      o.start();
+      o.stop(audioCtx.currentTime + dur + 0.02);
+    } catch (e) {}
+  }
+
+  document.getElementById('audioToggle').addEventListener('click', (e) => {
+    soundOn = !soundOn;
+    e.currentTarget.textContent = soundOn ? 'SOUND · ON' : 'SOUND · OFF';
+    e.currentTarget.classList.toggle('off', !soundOn);
+    if (soundOn) tick(660);
+  });
+
+  // ---------- tab routing ----------
+  const tabs = document.querySelectorAll('.tab');
+  const pages = document.querySelectorAll('.page');
+  function go(name) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+    pages.forEach(p => p.classList.toggle('active', p.dataset.page === name));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tick(440 + Math.random() * 120);
+    go(t.dataset.tab);
+  }));
+
+  // ---------- experience expandables ----------
+  const EXP = {
+    uh:      { t:"University of Houston", m:"Bauer College of Business · 2022–2026", b:"Finance & strategy student. Dean's List. Captained tennis, ran the largest student org, kept the GPA where it needed to be." },
+    kpmg:    { t:"KPMG", m:"Advisory · 2 years", b:"Big-4 consulting. Audit-adjacent program work, internal tooling, and translating exec strategy into things the team actually shipped." },
+    harvard: { t:"Harvard SVMP", m:"Summer Venture in Management Program · 2024", b:"1st place. Selective summer business program at HBS — case-driven, MBA-faculty-judged. Still my favorite trophy." },
+    tennis:  { t:"Tennis · President & Captain", m:"University of Houston · men's team", b:"First ever Sectionals win in program history. First ever Nationals appearance. Led on and off the court." },
+    lead:    { t:"Leadership", m:"Largest student org on UH campus", b:"Elected president of the biggest student organization on campus. Events, sponsorships, recruiting, comms — left it bigger than I found it." },
+    kae:     { t:"life of kae", m:"@_lifeofkae · personal brand", b:"Short-form lifestyle content about college, travel, and friends. Slow-build, real audience, real opinions." },
+    ugc:     { t:"AI · UGC", m:"Lovable · Turbo AI · Surgent AI · 6 mo", b:"Sponsored short-form for AI brands. Niche-targeted, on-brand, conversion-focused. ~1M views and counting." },
+    atkco:   { t:"AtkCo", m:"Operations · internship", b:"Analysis and reporting for a fast-moving small team. Touched everything from finance ops to client decks. Where the spreadsheet habit started." }
+  };
+  const expDetail = document.getElementById('expDetail');
+  const expTitle  = document.getElementById('expTitle');
+  const expMeta   = document.getElementById('expMeta');
+  const expBody   = document.getElementById('expBody');
+  let activeKey = null;
+
+  document.querySelectorAll('.exp-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.key;
+      tick(380 + (key.charCodeAt(0) % 12) * 18);
+      if (activeKey === key) {
+        // toggle off
+        btn.classList.remove('active');
+        expDetail.classList.remove('show');
+        activeKey = null;
+        return;
+      }
+      document.querySelectorAll('.exp-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const data = EXP[key];
+      expTitle.textContent = data.t;
+      expMeta.textContent  = data.m;
+      expBody.textContent  = data.b;
+      expDetail.classList.add('show');
+      activeKey = key;
+    });
+  });
+
+  // ---------- keyboard nav between tabs ----------
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    const order = ['home','about','work','projects','awards','contact'];
+    const cur = order.findIndex(n => document.querySelector(`[data-tab="${n}"]`).classList.contains('active'));
+    if (e.key === 'ArrowRight' && cur < order.length - 1) { tick(560); go(order[cur+1]); }
+    if (e.key === 'ArrowLeft'  && cur > 0)                { tick(440); go(order[cur-1]); }
+  });
+</script>
+
+</body>
+</html>
