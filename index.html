@@ -21,7 +21,7 @@
     </div>
 
     <nav class="tabs" id="tabs" aria-label="Primary">
-      <button class="tab active" data-tab="home"><span class="pulse"></span>home</button>
+      <button class="tab active" data-tab="home">home</button>
       <button class="tab" data-tab="about">about</button>
       <button class="tab" data-tab="work">work</button>
       <button class="tab" data-tab="projects">projects</button>
@@ -195,6 +195,7 @@
 
         <!-- Apple Music -->
         <div class="bento-card bc-music">
+          <audio id="bcAudio" src="abt me pics/rain-fisher.mp4" preload="metadata"></audio>
           <div class="bc-icon" style="background:none; padding:0; overflow:hidden; position:absolute; top:18px; right:18px;">
             <img src="abt me pics/apple music.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:12px;">
           </div>
@@ -203,6 +204,13 @@
           </div>
           <div class="bc-track-title">Rain</div>
           <div class="bc-track-sub">FISHER</div>
+          <div class="bc-controls">
+            <button class="bc-ctrl" id="bcRestart">&#9707;</button>
+            <button class="bc-ctrl" id="bcBack">&#9664;&#9664;</button>
+            <button class="bc-ctrl bc-play" id="bcPlayBtn">&#9654;</button>
+            <button class="bc-ctrl" id="bcFwd">&#9654;&#9654;</button>
+            <button class="bc-ctrl" id="bcMute">&#128266;</button>
+          </div>
         </div>
 
         <!-- Photos -->
@@ -548,6 +556,82 @@
   document.querySelector('.bc-gallery-prev').addEventListener('click', (e) => { e.stopPropagation(); setGallery(galleryIdx - 1); });
   document.querySelector('.bc-gallery-next').addEventListener('click', (e) => { e.stopPropagation(); setGallery(galleryIdx + 1); });
   galleryDots.forEach((dot, i) => dot.addEventListener('click', () => setGallery(i)));
+
+  // Typing animation for "create" (loops forever)
+  const dUl = document.querySelector('.d-ul');
+  const word = 'create';
+  dUl.style.animation = 'none';
+  dUl.classList.add('typing-cursor');
+
+  const TYPE_SPEED  = 110;
+  const DELETE_SPEED = 70;
+  const PAUSE_AFTER_TYPE   = 1200;
+  const PAUSE_AFTER_DELETE = 400;
+
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function tick() {
+    if (!isDeleting) {
+      charIndex++;
+      dUl.textContent = word.slice(0, charIndex);
+      if (charIndex === word.length) {
+        isDeleting = true;
+        setTimeout(tick, PAUSE_AFTER_TYPE);
+        return;
+      }
+      setTimeout(tick, TYPE_SPEED);
+    } else {
+      charIndex--;
+      dUl.textContent = word.slice(0, charIndex);
+      if (charIndex === 0) {
+        isDeleting = false;
+        setTimeout(tick, PAUSE_AFTER_DELETE);
+        return;
+      }
+      setTimeout(tick, DELETE_SPEED);
+    }
+  }
+
+  tick();
+
+  // Music player
+  const bcAudio = document.getElementById('bcAudio');
+  const bcPlayBtn = document.getElementById('bcPlayBtn');
+
+  function updatePlayBtn() {
+    bcPlayBtn.innerHTML = bcAudio.paused ? '&#9654;' : '&#9646;&#9646;';
+  }
+
+  bcPlayBtn.addEventListener('click', () => {
+    if (bcAudio.paused) { bcAudio.play(); } else { bcAudio.pause(); }
+    updatePlayBtn();
+    tick(500);
+  });
+
+  document.getElementById('bcRestart').addEventListener('click', () => {
+    bcAudio.currentTime = 0;
+    if (bcAudio.paused) { bcAudio.play(); updatePlayBtn(); }
+    tick(400);
+  });
+
+  document.getElementById('bcBack').addEventListener('click', () => {
+    bcAudio.currentTime = Math.max(0, bcAudio.currentTime - 10);
+    tick(400);
+  });
+
+  document.getElementById('bcFwd').addEventListener('click', () => {
+    bcAudio.currentTime = Math.min(bcAudio.duration || 0, bcAudio.currentTime + 10);
+    tick(400);
+  });
+
+  document.getElementById('bcMute').addEventListener('click', (e) => {
+    bcAudio.muted = !bcAudio.muted;
+    e.currentTarget.innerHTML = bcAudio.muted ? '&#128263;' : '&#128266;';
+    tick(400);
+  });
+
+  bcAudio.addEventListener('ended', () => { updatePlayBtn(); });
 
 </script>
 
