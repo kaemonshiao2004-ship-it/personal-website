@@ -1082,3 +1082,87 @@ p.lede em { font-style: italic; }
   letter-spacing: 0.06em;
 }
 .bottom .audio-toggle.off { background: var(--ink); color: var(--paper); }
+
+/* ---------- Global responsive ---------- */
+img, video { max-width: 100%; height: auto; }
+
+/* ---------- Mobile (≤ 600px) ---------- */
+@media (max-width: 600px) {
+
+  /* Shell */
+  .shell { padding: 14px 16px 60px; }
+
+  /* Top nav — make tabs scrollable */
+  .topbar { gap: 8px; margin-bottom: 14px; }
+  .brand { font-size: 18px; }
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    max-width: 100%;
+    flex-wrap: nowrap;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { padding: 7px 12px; font-size: 13px; white-space: nowrap; }
+
+  /* Banner */
+  .top-banner { margin: 10px 0 14px; }
+
+  /* Hero tile */
+  .hero-tile { padding: 20px; }
+  h1.display { font-size: clamp(42px, 13vw, 72px); }
+  .tagline { font-size: 17px; }
+
+  /* Stats row — keep 3 col but reduce sizing */
+  .stat .num { font-size: 26px; }
+  .stat { padding: 10px 12px; }
+
+  /* Currently tile */
+  .now-tile .text { font-size: 14px; }
+
+  /* Page section heading */
+  h2.section { font-size: clamp(28px, 8vw, 44px); }
+
+  /* Page intro */
+  .page-intro { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 16px; }
+
+  /* Work */
+  .work-item { padding: 14px 16px; gap: 12px; }
+  .work-item h3 { font-size: 18px; }
+  .work-logo { width: 40px; height: 40px; }
+
+  /* About prose */
+  .prose-body { font-size: 16px; }
+  .prose-section { margin-bottom: 22px; }
+
+  /* Bento grid — single column */
+  .bento-grid { grid-template-columns: 1fr; }
+
+  /* Music card album art */
+  .bc-album-art { width: 120px; height: 120px; }
+
+  /* Project cards */
+  .proj-card { padding: 16px; }
+  .proj-card h3 { font-size: 22px; }
+
+  /* Project video row — stack on tiny screens */
+  .proj-video-row { flex-direction: column; }
+  .proj-video-link { width: 100%; }
+  .proj-video-side { flex-direction: row; height: 120px; }
+  .proj-side-img { height: 100%; width: auto; flex: 1; }
+
+  /* Contact */
+  .contact-link { font-size: 18px; padding: 16px 18px; }
+  .contact-link .arrow { width: 30px; height: 30px; font-size: 13px; }
+
+  /* Big stat */
+  .big-stat { font-size: clamp(48px, 12vw, 80px); }
+
+  /* Tile padding */
+  .tile { padding: 16px; }
+
+  /* Travel strip already 1-col at 720px */
+
+  /* Footer */
+  .bottom { font-size: 10px; }
+}
